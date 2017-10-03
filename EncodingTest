@@ -1,0 +1,16 @@
+//https://www.ibm.com/developerworks/cn/java/j-lo-chinesecoding/index.html
+//test java encoding
+class EncodingTest {
+public static void main(String[] args) throws UnsupportedEncodingException {
+		String test1 = "hello";
+		String encoding = "UTF-8";
+//		String encoding = "ISO-8859-1";
+//		String encoding = "GBK";
+		byte[] bytes = new byte[] { 50, 0, -1, 28, -24 };
+		String sendString=new String( bytes ,encoding);
+		byte[] bytes1 = sendString.getBytes(encoding);
+		for (int i = 0; i < bytes1.length; i++) {
+			System.out.print(bytes1[i] +" ");
+			
+		}
+}
